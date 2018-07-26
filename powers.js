@@ -58,6 +58,17 @@ document.querySelector("#activate-xray").addEventListener("click", (event) => {
 
 //     });
 
+let activateAll = document.querySelectorAll(".power")
+document.querySelector("#activate-all")
+.addEventListener("click", (event) => {
+    for (let i = 0; i < activateAll.length; i++) {
+        const element = activateAll[i];
+        if (element.classList.contains("disabled"))
+        element.classList.remove("disabled");
+        element.classList.add("enabled");
+    }
+});
+
     let deactivateAll = document.querySelectorAll(".power")
     document.querySelector("#deactivate-all")
     .addEventListener("click", (event) => {
@@ -69,16 +80,7 @@ document.querySelector("#activate-xray").addEventListener("click", (event) => {
         }
     });
 
-    let activateAll = document.querySelectorAll(".power")
-    document.querySelector("#activate-all")
-    .addEventListener("click", (event) => {
-        for (let i = 0; i < activateAll.length; i++) {
-            const element = activateAll[i];
-            if (element.classList.contains("disabled"))
-            element.classList.remove("disabled");
-            element.classList.add("enabled");
-        }
-    });
+ 
 
 
 
